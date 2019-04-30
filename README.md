@@ -1,5 +1,5 @@
-## CakePHP-Google-URL-Shortener Plugin 
-######by NageswaraRao S
+## Firebase-URL-Shortener Plugin 
+######by Ian van den Heuvel
 
 *If you want send urls through out tweats, sms or other texts which should stay as short as possible and could contain urls. There are many use cases where such a shortening service might be useful. The one is fast and reliable and without costs.*
 
@@ -8,15 +8,15 @@
 
 ####Step 1:
 ```
-Extract the Lib/GoogleURLAPI.php file and place in app/Lib/GoogleURLAPI.php
+Extract the Lib/FirebaseURLAPI.php file and place in app/Lib/FirebaseURLAPI.php
 
 ``` 
 
 ####Step 2:
 ```
-Configure Google URL Shortener Server API key in Cofig/core.php
+Configure Firebase URL Shortener Server API key in Cofig/core.php
 
-Configure::write('GoogleURLAPIServerKey', 'your key'); //This is your Private API Server Key 
+Configure::write('FirebaseURLAPIServerKey', 'your key'); //This is your Private API Server Key 
 
 ```
 follow this link to generate server key [Visit Google Developers site](https://developers.google.com/url-shortener/v1/getting_started)
