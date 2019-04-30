@@ -1,10 +1,10 @@
 <?php
-class GoogleURLAPI { 
+class FirebaseURLAPI { 
 
 	//this method generates the short url from long url
 	//ex: http://something.xyz/about => goo.gl/nkjlfa 
 	public function generateShortURL($url){
-		$key=Configure::read('GoogleURLAPIServerKey'); //read google server API key from CakeConfiguration file
+		$key=Configure::read('FirebaseURLAPIServerKey'); //read google server API key from CakeConfiguration file
 		$curlObj = curl_init(); //initailize curl 
 		$jsonData = json_encode($url);
 		//set curl post and headers
@@ -30,7 +30,7 @@ class GoogleURLAPI {
 	//ex: goo.gl/nkjlfa => http://something.xyz/about
 	
 	public function getLongURLfromShortURL($url){
-		$key=Configure::read('GoogleURLAPIServerKey'); //read google server API key from CakeConfiguration file
+		$key=Configure::read('FirebaseURLAPIServerKey'); //read google server API key from CakeConfiguration file
 		$curlObj = curl_init(); //initailize curl 
 		curl_setopt($ch,CURLOPT_URL,'https://www.googleapis.com/urlshortener/v1/url?key='.$key.'&shortUrl='.$url);
 		$response = curl_exec($curlObj); 
